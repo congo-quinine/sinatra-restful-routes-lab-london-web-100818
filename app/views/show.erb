@@ -1,0 +1,14 @@
+<h1>Cook It Real Good</h1>
+
+<ul>
+  <li> <%= @find_recipe.name %> </li>
+  <li> <%= @find_recipe.ingredients %> </li>
+  <li> <%= @find_recipe.cook_time %> minutes</li>
+</ul>
+
+<a href="/recipes/<%=@find_recipe.id%>/edit">Edit</a>
+
+<form action="/recipes/<%=@find_recipe.id%>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input id='delete' type='submit' value='delete'>
+</form>

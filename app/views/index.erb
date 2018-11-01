@@ -1,0 +1,7 @@
+<h1> Gran's Wack Cook Book </h1>
+
+<ul>
+  <% @recipes.each do |i| %>
+  <li> <a href="/recipes/<%= i.id %>"> <%= i.name %> </a></li>
+<% end %>
+</ul>
